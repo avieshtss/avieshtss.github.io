@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>I Love You</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .love-button {
+      background-color: #ff6347; /* Vibrant red */
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.5em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 2px 2px 4px #000;
+    }
+
+    .love-button:hover {
+      background-color: #ff4d4d;
+    }
+
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px #000;
+      width: 300px;
+      z-index: 100; /* Ensure it's above other elements */
+    }
+
+    .popup h2 {
+      color: #ff6347;
+      margin-bottom: 10px;
+    }
+
+    .popup p {
+      line-height: 1.5;
+    }
+
+    .close-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+
+    .close-button:hover {
+      color: #ff4d4d;
+    }
+  </style>
+</head>
+<body>
+  <p <style: center,>Click mo bai</p>
+  <button class="love-button">I Love You</button>
+
+  <div class="popup">
+    <span class="close-button">&times;</span>
+    <h2>Bai?!</h2>
+    <p>Bai sorry na po iloveyou so much:(</p>
+  </div>
+
+  <script>
+    const loveButton = document.querySelector('.love-button');
+    const popup = document.querySelector('.popup');
+    const closeButton = document.querySelector('.close-button');
+
+    loveButton.addEventListener('click', () => {
+      popup.style.display = 'block';
+    });
+
+    closeButton.addEventListener('click', () => {
+      popup.style.display = 'none';
+    });
+  </script>
+
+</body>
+</html>
